@@ -7,41 +7,62 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <style>
         .reveal {
-            background-color: #ffffff;
+            background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
             color: #222;
+            font-family: 'Inter', sans-serif;
         }
         .reveal h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             color: #ff69b4;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(255, 105, 180, 0.15);
         }
         .reveal h2 {
-            font-size: 2em;
+            font-size: 2.2em;
             color: #ff69b4;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            margin-bottom: 30px;
         }
         .reveal h3 {
-            font-size: 1.5em;
+            font-size: 1.6em;
             color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
         .reveal p {
             color: #444;
+            line-height: 1.6;
+            font-weight: 400;
         }
         .reveal strong {
             color: #ff69b4;
+            font-weight: 700;
         }
         .reveal .quote {
             font-style: italic;
-            font-size: 1.5em;
+            font-size: 1.6em;
             border-left: 5px solid #ff69b4;
-            padding-left: 20px;
-            margin: 30px 0;
+            padding-left: 30px;
+            margin: 40px 0;
             color: #333;
+            background: rgba(255, 105, 180, 0.03);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
         .reveal .section-number {
-            font-size: 4em;
+            font-size: 5em;
             color: #ff69b4;
-            font-weight: bold;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            text-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
         }
         .reveal .comparison {
             display: flex;
@@ -50,40 +71,54 @@
         }
         .reveal .comparison > div {
             flex: 1;
-            padding: 20px;
-            margin: 0 10px;
-            border-radius: 10px;
+            padding: 30px;
+            margin: 0 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        .reveal .comparison > div:hover {
+            transform: translateY(-5px);
         }
         .reveal .wrong {
-            background-color: rgba(255, 0, 0, 0.1);
-            border: 2px solid rgba(255, 0, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.08) 0%, rgba(255, 0, 0, 0.12) 100%);
+            border: 3px solid rgba(255, 0, 0, 0.3);
         }
         .reveal .right {
-            background-color: rgba(0, 255, 0, 0.1);
-            border: 2px solid rgba(0, 255, 0, 0.3);
+            background: linear-gradient(135deg, rgba(0, 255, 150, 0.08) 0%, rgba(0, 255, 100, 0.12) 100%);
+            border: 3px solid rgba(0, 200, 100, 0.3);
         }
         .reveal .bdd-example {
-            background-color: rgba(105, 105, 255, 0.05);
-            border: 2px solid rgba(105, 105, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
+            background: linear-gradient(135deg, rgba(105, 105, 255, 0.05) 0%, rgba(150, 150, 255, 0.08) 100%);
+            border: 3px solid rgba(105, 105, 255, 0.25);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
             text-align: left;
+            box-shadow: 0 4px 20px rgba(105, 105, 255, 0.1);
         }
         .reveal ul, .reveal ol {
             color: #444;
         }
         .reveal li {
-            margin: 10px 0;
+            margin: 15px 0;
+            line-height: 1.6;
         }
         .reveal .nested-detail {
-            background-color: rgba(255, 105, 180, 0.03);
-            padding: 40px;
-            border-radius: 15px;
+            background: linear-gradient(135deg, rgba(255, 105, 180, 0.03) 0%, rgba(255, 150, 200, 0.05) 100%);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+            border: 2px solid rgba(255, 105, 180, 0.1);
         }
         .reveal .nested-detail h3 {
             color: #ff69b4;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .emoji {
+            font-size: 1.3em;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -93,67 +128,66 @@
             
             <!-- Slide 1: Introdução -->
             <section>
-                <h1>O Novo Código</h1>
-                <p>O desenvolvimento de software vai muito além de apenas escrever código.</p>
+                <h1>💡 O Novo Código</h1>
+                <p style="font-size: 1.3em; margin-top: 40px;">O desenvolvimento de software vai muito além de apenas escrever código.</p>
             </section>
 
             <!-- Slide 2: O Problema -->
             <section>
-                <h2>O Problema</h2>
+                <h2>🤔 O Problema</h2>
                 <h3>Quanto tempo sua equipe gasta <strong>reconstruindo contexto?</strong></h3>
-                <p>"Por que decidimos fazer assim mesmo?"</p>
-                <p style="margin-top: 20px;">Slack, Jira, PRs, docs desatualizados, código, pessoas que já saíram...</p>
-                <p style="margin-top: 20px; color: #ff69b4;"><strong>Arqueologia de decisões</strong> em vez de criar o futuro.</p>
+                <p style="font-size: 1.2em; font-style: italic; margin-top: 30px;">"Por que decidimos fazer assim mesmo?"</p>
+                <p style="margin-top: 30px; font-size: 1.1em;">📱 Slack • 🎫 Jira • 💬 PRs • 📄 Docs desatualizados • 💻 Código • 👤 Pessoas que já saíram...</p>
+                <p style="margin-top: 35px; color: #ff69b4; font-size: 1.3em;"><strong>🔍 Arqueologia de decisões</strong> em vez de criar o futuro.</p>
             </section>
 
             <!-- Slide 3: Conceito -->
             <section>
-                <h2>Amnésia Organizacional</h2>
-                <p>Falha da memória coletiva que leva a <strong>retrabalho</strong> e <strong>documentação desatualizada</strong>.</p>
+                <h2>🧠 Amnésia Organizacional</h2>
+                <p style="font-size: 1.2em; margin-top: 30px;">Falha da memória coletiva que leva a <strong>retrabalho</strong> e <strong>documentação desatualizada</strong>.</p>
             </section>
 
             <!-- Slide 4: Citação -->
             <section>
                 <div class="quote">
-                    "Inteligência sem <strong>memória</strong> é apenas <strong>aleatoriedade sofisticada</strong>."
+                    💭 "Inteligência sem <strong>memória</strong> é apenas <strong>aleatoriedade sofisticada</strong>."
                 </div>
-                <p>O desafio de construir sobre o conhecimento aprendido</p>
+                <p style="font-size: 1.1em; margin-top: 30px;">O desafio de construir sobre o conhecimento aprendido</p>
             </section>
 
             <!-- Slide 5: Seção 1 -->
             <section>
                 <div class="section-number">1.</div>
-                <h2>Dívida de Conhecimento</h2>
-                <p><strong>Dívida de Conhecimento:</strong> Informações cruciais se perdem ou se tornam obsoletas, similar à dívida técnica.</p>
-                <p><strong>Por que esquecemos?</strong></p>
+                <h2>📚 Dívida de Conhecimento</h2>
+                <p style="font-size: 1.3em; margin-top: 50px;">Informações cruciais se perdem ou ficam obsoletas, similar à dívida técnica.</p>
             </section>
 
             <!-- Slide 6: Impactos -->
             <section>
                 <section>
-                    <h2>Impactos da Dívida</h2>
-                    <p>A dívida de conhecimento gera <strong>retrabalho</strong>, <strong>bugs</strong> e desperdício de <strong>tempo</strong>.</p>
-                    <p style="margin-top: 20px;">O esforço de <strong>juntar as camadas</strong> que descrevem a intenção</p>
-                    <ul>
-                        <li>Retrabalho: 34%</li>
-                        <li>Bugs: 33%</li>
-                        <li>Arqueologia: 33%</li>
+                    <h2>⚠️ Impactos da Dívida</h2>
+                    <p style="font-size: 1.2em; margin-top: 30px;">A dívida de conhecimento gera <strong>retrabalho</strong>, <strong>bugs</strong> e desperdício de <strong>tempo</strong>.</p>
+                    <p style="margin-top: 25px; font-size: 1.1em;">O esforço de <strong>juntar as camadas</strong> que descrevem a intenção</p>
+                    <ul style="font-size: 1.1em; margin-top: 30px;">
+                        <li>🔄 Retrabalho: 34%</li>
+                        <li>🐛 Bugs: 33%</li>
+                        <li>🔍 Arqueologia: 33%</li>
                     </ul>
-                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ Exemplo prático</p>
+                    <p style="font-size: 0.9em; margin-top: 40px; opacity: 0.7;">↓ Exemplo prático</p>
                 </section>
-                <section class="nested-detail">
-                    <h3>A Caça ao Contexto</h3>
-                    <div style="text-align: left; max-width: 850px; margin: 0 auto;">
-                        <p style="font-size: 1.1em; margin-bottom: 20px;">"Por que o sistema valida CPF só no checkout?"</p>
-                        <div style="margin-left: 20px;">
-                            <p style="margin-top: 15px;">📱 <strong>Slack:</strong> "Alguém lembra por que validamos CPF só no final?"</p>
-                            <p style="margin-top: 10px;">🎫 <strong>Jira:</strong> Ticket de 2 anos atrás, descrição vaga</p>
-                            <p style="margin-top: 10px;">💬 <strong>PR #342:</strong> "Revert: validação antecipada causava lentidão"</p>
-                            <p style="margin-top: 10px;">📄 <strong>Doc:</strong> Desatualizado, fala de API antiga</p>
-                            <p style="margin-top: 10px;">👤 <strong>Autor original:</strong> Saiu da empresa</p>
+                <section class="nested-detail" style="padding: 10px 20px;">
+                    <h3 style="margin-bottom: 8px; font-size: 1.1em;">A Caça ao Contexto</h3>
+                    <div style="text-align: left; max-width: 700px; margin: 0 auto;">
+                        <p style="font-size: 0.85em; margin-bottom: 6px; font-style: italic;">"Por que valida CPF só no checkout?"</p>
+                        <div style="font-size: 0.75em; line-height: 1.2;">
+                            <p style="margin: 4px 0;">📱 Slack: Ninguém lembra</p>
+                            <p style="margin: 4px 0;">🎫 Jira: Ticket vago</p>
+                            <p style="margin: 4px 0;">💬 PR: Revert</p>
+                            <p style="margin: 4px 0;">📄 Doc: Desatualizado</p>
+                            <p style="margin: 4px 0;">👤 Autor: Saiu</p>
                         </div>
-                        <p style="margin-top: 25px; color: #ff69b4; font-size: 1.1em;">
-                            <strong>Resultado:</strong> 3 horas montando o quebra-cabeça. Cada vez que alguém novo precisa entender.
+                        <p style="margin-top: 8px; color: #ff69b4; font-size: 0.85em;">
+                            <strong>Resultado:</strong> 3h reconstruindo
                         </p>
                     </div>
                 </section>
@@ -171,17 +205,17 @@
 
             <!-- Slide 8: Métricas -->
             <section>
-                <h2>20% Código vs 80% Comunicação</h2>
-                <div class="comparison">
+                <h2>📊 20% Código vs 80% Comunicação</h2>
+                <div class="comparison" style="margin-top: 50px;">
                     <div>
-                        <h3 style="font-size: 4em;">20%</h3>
-                        <p><strong>Código</strong></p>
-                        <p>O artefato final</p>
+                        <h3 style="font-size: 4.5em;">20%</h3>
+                        <p style="font-size: 1.3em;"><strong>💻 Código</strong></p>
+                        <p style="font-size: 1.1em;">O artefato final</p>
                     </div>
                     <div>
-                        <h3 style="font-size: 4em;">80%</h3>
-                        <p><strong>Comunicação Estruturada</strong></p>
-                        <p>Entender, planejar, alinhar</p>
+                        <h3 style="font-size: 4.5em;">80%</h3>
+                        <p style="font-size: 1.3em;"><strong>💬 Comunicação Estruturada</strong></p>
+                        <p style="font-size: 1.1em;">Entender, planejar, alinhar</p>
                     </div>
                 </div>
             </section>
@@ -228,20 +262,20 @@
             <!-- Slide 10: Seção 2 -->
             <section>
                 <div class="section-number">2.</div>
-                <h2>Além do Código: A Especificação</h2>
-                <p>A especificação é a <strong>nova fonte da verdade</strong> e o artefato universal que alinha as áreas</p>
-                <p>(Engenharia, Produto, Jurídico, etc.)</p>
+                <h2>📖 Além do Código: A Especificação</h2>
+                <p style="font-size: 1.3em; margin-top: 30px;">A especificação é a <strong>nova fonte da verdade</strong> e o artefato universal que alinha as áreas</p>
+                <p style="font-size: 1.1em; margin-top: 25px;">(🛠️ Engenharia • 📱 Produto • ⚖️ Jurídico • 🔒 Segurança)</p>
             </section>
 
             <!-- Slide 11: Seção 3 -->
             <section>
                 <section>
                     <div class="section-number">3.</div>
-                    <h2>Memória Aumentada</h2>
-                    <p><strong>Memória Aumentada:</strong> A união de <strong>IA</strong> e nossa <strong>"Receita de Bolo"</strong></p>
-                    <p style="margin-top: 20px;">A IA funciona como o grande bibliotecário que nunca esquece nada.</p>
-                    <p style="margin-top: 20px;">E o BDD é nossa <strong>Linguagem Universal</strong> que todos entendem.</p>
-                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ O que é BDD?</p>
+                    <h2>🤖 Memória Aumentada</h2>
+                    <p style="font-size: 1.2em; margin-top: 30px;">🤖 IA + 📝 "Receita de Bolo"</p>
+                    <p style="margin-top: 30px; font-size: 1.1em;">IA = bibliotecário que nunca esquece</p>
+                    <p style="margin-top: 25px; font-size: 1.1em;">BDD = linguagem universal</p>
+                    <p style="font-size: 0.9em; margin-top: 40px; opacity: 0.7;">↓ O que é BDD?</p>
                 </section>
                 <section class="nested-detail">
                     <h3>O que é BDD?</h3>
@@ -262,109 +296,68 @@
             <!-- Slide 12: Fluxo de Trabalho -->
             <section>
                 <section>
-                    <h2>Nossa "Receita de Bolo" em Ação</h2>
-                    <h3>Fluxo:</h3>
-                    <ol>
-                        <li>Coletar Contexto</li>
-                        <li>Alimentar IA</li>
-                        <li>IA Sugere a "Receita"</li>
-                        <li><strong>Equipe Refina</strong> (o papel humano!)</li>
-                        <li>Teste Automatizado (Documentação Viva)</li>
+                    <h2>🎯 Nossa "Receita de Bolo" em Ação</h2>
+                    <h3 style="margin-top: 40px;">Fluxo:</h3>
+                    <ol style="font-size: 1.3em; margin-top: 40px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+                        <li>📥 Coletar Contexto</li>
+                        <li>🤖 Alimentar IA</li>
+                        <li>✨ IA Sugere a "Receita"</li>
+                        <li><strong>👥 Equipe Refina</strong> (o papel humano!)</li>
+                        <li>✅ Teste Automatizado (Documentação Viva)</li>
                     </ol>
-                    <div class="bdd-example" style="background-color: rgba(255, 200, 100, 0.1); border-color: rgba(255, 150, 0, 0.3);">
-                        <p style="font-size: 1.1em; margin-bottom: 15px;">📝 <strong>Exemplo de Receita:</strong></p>
-                        <p><strong>DADO</strong> que tenho ingredientes (item + cupom)</p>
-                        <p><strong>QUANDO</strong> sigo o processo (finalizar compra)</p>
-                        <p><strong>ENTÃO</strong> obtenho o resultado (desconto aplicado)</p>
-                        <p style="font-size: 0.8em; margin-top: 10px; color: #666;">(Legível por Negócios, Dev, QA, Marketing...)</p>
-                    </div>
-                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ O papel da IA</p>
+                    <p style="font-size: 0.9em; margin-top: 50px; opacity: 0.7;">↓ Ver exemplo de receita</p>
                 </section>
-                <section class="nested-detail">
-                    <h3>A IA como Facilitador</h3>
-                    <div style="text-align: left; max-width: 800px; margin: 0 auto;">
-                        <p><strong>A IA entrega o rascunho</strong>, o ponto de partida. Ela faz o <strong>trabalho pesado</strong> de lembrar todas as regras existentes.</p>
-                        <p style="margin-top: 20px;"><strong>Nosso papel como especialistas</strong> é usar nossa inteligência para refinar, discutir e validar.</p>
-                        <p style="margin-top: 20px; color: #ff69b4; font-size: 1.1em;">
-                            A tecnologia nos libera da tarefa de <strong>'lembrar'</strong> para focarmos em <strong>'pensar'</strong> e <strong>'criar juntos'</strong>.
-                        </p>
+                <section class="nested-detail" style="padding: 10px 20px;">
+                    <h3 style="margin-bottom: 8px; font-size: 1.1em;">📝 Exemplo de Receita BDD</h3>
+                    <div class="bdd-example" style="background-color: rgba(255, 200, 100, 0.1); border-color: rgba(255, 150, 0, 0.3); max-width: 750px; margin: 8px auto; padding: 18px 25px;">
+                        <p style="font-size: 0.95em; margin-bottom: 10px;"><strong>Cenário:</strong> Aplicar desconto</p>
+                        <p style="font-size: 0.9em; margin: 6px 0;"><strong>DADO</strong> item + cupom</p>
+                        <p style="font-size: 0.9em; margin: 6px 0;"><strong>QUANDO</strong> finalizar</p>
+                        <p style="font-size: 0.9em; margin: 6px 0;"><strong>ENTÃO</strong> desconto aplicado</p>
+                        <p style="font-size: 0.75em; margin-top: 10px; color: #666; font-style: italic;">(Legível por todos)</p>
                     </div>
+                    <p style="margin-top: 10px; font-size: 0.85em;">IA mantém atualizado</p>
                 </section>
             </section>
 
-            <!-- Slide 13: Benefícios -->
+            <!-- Slide 13: Uma Provocação -->
             <section>
-                <section>
-                    <h2>Benefícios Claros</h2>
-                    <p>Benefícios claros: <strong>Alinhamento</strong>, menos <strong>retrabalho</strong> e mais tempo para <strong>inovar</strong></p>
-                    <p>Equipes liberadas para focar no valor</p>
-                    <ul>
-                        <li>↑ Alinhamento</li>
-                        <li>↓ Retrabalho</li>
-                        <li>↑ Inovação</li>
-                    </ul>
-                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ Times pequenos, grande impacto</p>
-                </section>
-                <section class="nested-detail">
-                    <h3>Times Pequenos com Superpoderes</h3>
-                    <div style="text-align: left; max-width: 800px; margin: 0 auto;">
-                        <p>Com a IA fazendo o <strong>trabalho pesado</strong>, conseguimos manter times <strong>enxutos</strong> e <strong>ágeis</strong>.</p>
-                        <p style="margin-top: 20px;">
-                            A IA lê documentações antigas, lembra de todas as regras de negócio, 
-                            detecta inconsistências e sugere especificações completas.
-                        </p>
-                        <p style="margin-top: 20px; color: #ff69b4; font-size: 1.1em;">
-                            <strong>Resultado:</strong> Pequenos times com grande potencial de entrega e qualidade.
-                        </p>
-                        <p style="margin-top: 20px; font-size: 0.9em;">
-                            Sem precisar escalar linearmente a equipe para escalar o produto.
-                        </p>
-                    </div>
-                </section>
+                <h2>💭 Uma Provocação</h2>
+                <p style="font-size: 1.4em; margin-top: 40px; line-height: 1.5;">
+                    E se pudéssemos resolver o problema da <strong>🔍 arqueologia de decisões</strong>?
+                </p>
+                <p style="font-size: 1.3em; margin-top: 35px; line-height: 1.5;">
+                    Ter uma <strong>📖 especificação viva</strong> que todos entendem, mantida com ajuda da <strong>🤖 IA</strong>.
+                </p>
+                <p style="font-size: 1.5em; margin-top: 50px; color: #ff69b4; font-weight: 600;">
+                    Essa é uma <strong>proposta</strong>, não uma decisão tomada.
+                </p>
             </section>
 
-            <!-- Slide 14: Seção 4 -->
+            <!-- Slide 14: Próximos Passos -->
             <section>
-                <div class="section-number">4.</div>
-                <h2>Quem é o Programador?</h2>
-                <p>Se a especificação é o novo código, qual é o papel de quem programa?</p>
-                <p>Analogia da <strong>Constituição</strong> como uma especificação universal</p>
-                <ul style="text-align: left; margin-top: 30px;">
-                    <li>Programador: Código → Silício</li>
-                    <li>Ger. de Produto: Produto → Equipes</li>
-                    <li>Legislador: Leis → Humanos</li>
-                    <li><strong>Todos Nós: Prompts → Modelos de IA</strong></li>
+                <h2>🎯 Próximos Passos</h2>
+                <ul style="text-align: left; max-width: 750px; margin: 60px auto; font-size: 1.3em;">
+                    <li style="margin: 25px 0;">📋 Definir <strong>guidelines</strong></li>
+                    <li style="margin: 25px 0;">🧪 Fazer <strong>experimentos</strong></li>
+                    <li style="margin: 25px 0;">📊 Medir o <strong>impacto</strong></li>
+                    <li style="margin: 25px 0;">🔄 <strong>Iterar</strong> e aprender juntos</li>
                 </ul>
             </section>
 
-            <!-- Slide 15: Comunicação -->
+            <!-- Slide 15: Convite para Discussão -->
             <section>
-                <div class="quote">
-                    "A pessoa que se <strong>comunica</strong> de forma mais <strong>eficaz</strong> é a <strong>programadora</strong> mais <strong>valiosa</strong>."
-                </div>
-                <p>Foco em comunicar intenções com clareza</p>
-            </section>
-
-            <!-- Slide 16: Síntese -->
-            <section>
-                <h2>Engenharia de Software como Clarificação</h2>
-                <p>O trabalho sempre foi sobre resolver problemas humanos</p>
-                <p>Uma linguagem unificada (especificação) facilita a <strong>transição da confusão para a estrutura</strong></p>
-                <p style="font-size: 1.5em; margin-top: 30px;">Confusão → Clarificação → Estrutura</p>
-            </section>
-
-            <!-- Slide 17: Convite -->
-            <section>
-                <h2>Vamos Construir Juntos?</h2>
-                <p style="margin-top: 50px;">Se a IDE foi a ferramenta da era do Código, qual será a da era da Especificação?</p>
-                <p style="font-size: 1.2em; margin-top: 30px;">Um <strong>"Clarificador de Pensamento"</strong> que nos ajude a:</p>
-                <ul style="text-align: left; max-width: 600px; margin: 30px auto;">
-                    <li>Expressar intenções com clareza total</li>
-                    <li>Preservar a memória coletiva</li>
-                    <li>Potencializar times pequenos</li>
-                    <li>Focar no que realmente importa: criar o futuro</li>
-                </ul>
-                <p style="font-size: 1.5em; margin-top: 40px; color: #ff69b4;">E queremos construir isso <strong>com você</strong>.</p>
+                <h2>💬 Vamos Conversar?</h2>
+                <p style="font-size: 1.4em; margin-top: 50px; line-height: 1.6;">
+                    Esta é uma <strong>provocação</strong> para iniciarmos uma discussão.
+                </p>
+                <p style="font-size: 1.3em; margin-top: 40px; line-height: 1.6;">
+                    O problema da <strong>arqueologia de decisões</strong> é real.<br/>
+                    A solução pode ter muitas formas.
+                </p>
+                <p style="font-size: 1.6em; margin-top: 60px; color: #ff69b4; font-weight: 700;">
+                    O que vocês acham? 🤔
+                </p>
             </section>
 
         </div>
@@ -380,7 +373,7 @@
             center: true,
             width: 1920,
             height: 1080,
-            margin: 0.1,
+            margin: 0.04,
             minScale: 0.2,
             maxScale: 2.0
         });
