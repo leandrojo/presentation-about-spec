@@ -263,6 +263,17 @@ Use isso para decidir se quer aprofundar.
 
 ---
 
+## Publicação no GitHub Pages
+
+1. Garanta que o branch `main` contenha a versão atualizada do site (arquivos `index.html`, `roteiro.html`, `view-spec.md`, etc.).
+2. No GitHub, acesse **Settings → Pages**, escolha **Source: GitHub Actions** e salve.
+3. O workflow em `.github/workflows/gh-pages.yml` roda a cada push no `main` e publica automaticamente o conteúdo estático.
+4. A primeira execução leva alguns minutos; acompanhe em **Actions**. O link final aparece em **Deployments → GitHub Pages**.
+
+Para reprocessar manualmente, vá em **Actions → Deploy site to GitHub Pages → Run workflow** e confirme a execução com o branch desejado.
+
+---
+
 ## Mensagem Final
 
 **Lembre-se:**
@@ -277,4 +288,3 @@ O objetivo é:
 A apresentação já está sólida. Agora é sobre **conexão humana**.
 
 Boa sorte! 🚀
-
