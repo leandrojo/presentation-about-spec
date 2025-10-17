@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Novo Código - Apresentação</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css">
+    <style>
+        .reveal {
+            background-color: #ffffff;
+            color: #222;
+        }
+        .reveal h1 {
+            font-size: 2.5em;
+            color: #ff69b4;
+        }
+        .reveal h2 {
+            font-size: 2em;
+            color: #ff69b4;
+        }
+        .reveal h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .reveal p {
+            color: #444;
+        }
+        .reveal strong {
+            color: #ff69b4;
+        }
+        .reveal .quote {
+            font-style: italic;
+            font-size: 1.5em;
+            border-left: 5px solid #ff69b4;
+            padding-left: 20px;
+            margin: 30px 0;
+            color: #333;
+        }
+        .reveal .section-number {
+            font-size: 4em;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        .reveal .comparison {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .reveal .comparison > div {
+            flex: 1;
+            padding: 20px;
+            margin: 0 10px;
+            border-radius: 10px;
+        }
+        .reveal .wrong {
+            background-color: rgba(255, 0, 0, 0.1);
+            border: 2px solid rgba(255, 0, 0, 0.3);
+        }
+        .reveal .right {
+            background-color: rgba(0, 255, 0, 0.1);
+            border: 2px solid rgba(0, 255, 0, 0.3);
+        }
+        .reveal .bdd-example {
+            background-color: rgba(105, 105, 255, 0.05);
+            border: 2px solid rgba(105, 105, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .reveal ul, .reveal ol {
+            color: #444;
+        }
+        .reveal li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Introdução -->
+            <section>
+                <h1>O Novo Código</h1>
+                <p>O desenvolvimento de software vai muito além de apenas escrever código.</p>
+            </section>
+
+            <!-- Slide 2: O Problema -->
+            <section>
+                <h2>O Problema</h2>
+                <h3>Sua equipe já resolveu o <strong>mesmo problema mais de uma vez?</strong></h3>
+                <p>Retrabalho e documentação desatualizada</p>
+            </section>
+
+            <!-- Slide 3: Conceito -->
+            <section>
+                <h2>Amnésia Organizacional</h2>
+                <p>Falha da memória coletiva que leva a <strong>retrabalho</strong> e <strong>documentação desatualizada</strong>.</p>
+            </section>
+
+            <!-- Slide 4: Citação -->
+            <section>
+                <div class="quote">
+                    "Inteligência sem <strong>memória</strong> é apenas <strong>aleatoriedade sofisticada</strong>."
+                </div>
+                <p>O desafio de construir sobre o conhecimento aprendido</p>
+            </section>
+
+            <!-- Slide 5: Seção 1 -->
+            <section>
+                <div class="section-number">1.</div>
+                <h2>Dívida de Conhecimento</h2>
+                <p><strong>Dívida de Conhecimento:</strong> Informações cruciais se perdem ou se tornam obsoletas, similar à dívida técnica.</p>
+                <p><strong>Por que esquecemos?</strong></p>
+            </section>
+
+            <!-- Slide 6: Impactos -->
+            <section>
+                <h2>Impactos da Dívida</h2>
+                <p>A dívida de conhecimento gera <strong>retrabalho</strong>, <strong>bugs</strong> e <strong>desalinhamento</strong> entre as equipes.</p>
+                <p>O "telefone sem fio" entre Produto, Dev e QA</p>
+                <ul>
+                    <li>Retrabalho: 34%</li>
+                    <li>Bugs: 33%</li>
+                    <li>Desalinhamento: 33%</li>
+                </ul>
+            </section>
+
+            <!-- Slide 7: Citação -->
+            <section>
+                <div class="quote">
+                    "O código em si é uma <strong>projeção com perdas</strong> da especificação."
+                </div>
+                <p>O código é uma representação incompleta, perdendo intenções e comentários</p>
+            </section>
+
+            <!-- Slide 8: Métricas -->
+            <section>
+                <h2>20% Código vs 80% Comunicação</h2>
+                <div class="comparison">
+                    <div>
+                        <h3 style="font-size: 4em;">20%</h3>
+                        <p><strong>Código</strong></p>
+                        <p>O artefato final</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 4em;">80%</h3>
+                        <p><strong>Comunicação Estruturada</strong></p>
+                        <p>Entender, planejar, alinhar</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Paradigma -->
+            <section>
+                <h2>O Erro com IA</h2>
+                <div class="comparison">
+                    <div class="wrong">
+                        <h3>❌ Cenário Errado</h3>
+                        <p>Gerar código a partir de um prompt e <strong>jogar o prompt fora</strong></p>
+                        <p>(perdendo o código-fonte)</p>
+                    </div>
+                    <div class="right">
+                        <h3>✅ Cenário Certo</h3>
+                        <p>Ciclo de feedback que <strong>preserva</strong> a documentação/especificação</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Seção 2 -->
+            <section>
+                <div class="section-number">2.</div>
+                <h2>Além do Código: A Especificação</h2>
+                <p>A especificação é a <strong>nova fonte da verdade</strong> e o artefato universal que alinha as áreas</p>
+                <p>(Engenharia, Produto, Jurídico, etc.)</p>
+            </section>
+
+            <!-- Slide 11: Seção 3 -->
+            <section>
+                <div class="section-number">3.</div>
+                <h2>Memória Aumentada</h2>
+                <p><strong>Memória Aumentada:</strong> A união de <strong>IA</strong> e <strong>BDD</strong> (Behavior-Driven Development)</p>
+                <p>Para criar <strong>documentação viva</strong>, precisa e que evolui com o produto</p>
+            </section>
+
+            <!-- Slide 12: Fluxo de Trabalho -->
+            <section>
+                <h2>BDD Aumentado por IA</h2>
+                <h3>Fluxo:</h3>
+                <ol>
+                    <li>Coletar Contexto</li>
+                    <li>Alimentar IA</li>
+                    <li>IA Sugere BDD</li>
+                    <li>Equipe Refina</li>
+                    <li>Teste Automatizado (Documentação Viva)</li>
+                </ol>
+                <div class="bdd-example">
+                    <p><strong>DADO</strong> um item e um cupom</p>
+                    <p><strong>QUANDO</strong> finaliza a compra</p>
+                    <p><strong>ENTÃO</strong> o total exibe o <strong>desconto</strong></p>
+                    <p style="font-size: 0.8em; margin-top: 10px;">(Legível por todos)</p>
+                </div>
+            </section>
+
+            <!-- Slide 13: Benefícios -->
+            <section>
+                <h2>Benefícios Claros</h2>
+                <p>Benefícios claros: <strong>Alinhamento</strong>, menos <strong>retrabalho</strong> e mais tempo para <strong>inovar</strong></p>
+                <p>Equipes liberadas para focar no valor</p>
+                <ul>
+                    <li>↑ Alinhamento</li>
+                    <li>↓ Retrabalho</li>
+                    <li>↑ Inovação</li>
+                </ul>
+            </section>
+
+            <!-- Slide 14: Seção 4 -->
+            <section>
+                <div class="section-number">4.</div>
+                <h2>Quem é o Programador?</h2>
+                <p>Se a especificação é o novo código, qual é o papel de quem programa?</p>
+                <p>Analogia da <strong>Constituição</strong> como uma especificação universal</p>
+                <ul style="text-align: left; margin-top: 30px;">
+                    <li>Programador: Código → Silício</li>
+                    <li>Ger. de Produto: Produto → Equipes</li>
+                    <li>Legislador: Leis → Humanos</li>
+                    <li><strong>Todos Nós: Prompts → Modelos de IA</strong></li>
+                </ul>
+            </section>
+
+            <!-- Slide 15: Comunicação -->
+            <section>
+                <div class="quote">
+                    "A pessoa que se <strong>comunica</strong> de forma mais <strong>eficaz</strong> é a <strong>programadora</strong> mais <strong>valiosa</strong>."
+                </div>
+                <p>Foco em comunicar intenções com clareza</p>
+            </section>
+
+            <!-- Slide 16: Síntese -->
+            <section>
+                <h2>Engenharia de Software como Clarificação</h2>
+                <p>O trabalho sempre foi sobre resolver problemas humanos</p>
+                <p>Uma linguagem unificada (especificação) facilita a <strong>transição da confusão para a estrutura</strong></p>
+                <p style="font-size: 1.5em; margin-top: 30px;">Confusão → Clarificação → Estrutura</p>
+            </section>
+
+            <!-- Slide 17: Convite -->
+            <section>
+                <h2>Vamos Construir Juntos?</h2>
+                <p style="margin-top: 50px;">Se a IDE foi a ferramenta da era do Código, qual será a da era da Especificação?</p>
+                <p style="font-size: 1.3em; margin-top: 40px;">Precisamos de ferramentas que nos ajudem a <strong>clarificar</strong> e <strong>preservar</strong> o pensamento</p>
+                <p style="font-size: 1.5em; margin-top: 40px; color: #ff69b4;">E queremos construir isso <strong>com você</strong>.</p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            transition: 'slide',
+            backgroundTransition: 'fade',
+            slideNumber: true,
+            center: true,
+            width: 1920,
+            height: 1080,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0
+        });
+    </script>
+</body>
+</html>
+
