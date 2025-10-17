@@ -6,416 +6,219 @@
     <title>Roteiro da Apresentação - O Novo Código</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #fff 100%);
-            padding: 40px 20px;
-            color: #2d3748;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            padding: 40px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 3px solid #ff69b4;
-        }
-        h1 {
-            font-size: 2.2em;
-            color: #ff69b4;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            font-size: 1.1em;
-            color: #718096;
-        }
-        .slide-card {
-            background: linear-gradient(135deg, rgba(255, 105, 180, 0.03) 0%, rgba(255, 150, 200, 0.05) 100%);
-            border: 2px solid rgba(255, 105, 180, 0.15);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .slide-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
-        }
-        .slide-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .slide-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
-            color: white;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 1.2em;
-        }
-        .slide-time {
-            background: rgba(255, 105, 180, 0.1);
-            color: #ff69b4;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9em;
-        }
-        .slide-title {
-            font-size: 1.4em;
-            color: #2d3748;
-            margin: 15px 0;
-            font-weight: 600;
-        }
-        .slide-content {
-            color: #4a5568;
-            font-size: 1.05em;
-            line-height: 1.7;
-        }
-        .key-points {
-            background: rgba(255, 200, 100, 0.08);
-            border-left: 4px solid #ffa500;
-            padding: 15px 20px;
-            margin-top: 15px;
-            border-radius: 0 8px 8px 0;
-        }
-        .key-points strong {
-            color: #d97706;
-        }
-        .nested-note {
-            background: rgba(100, 150, 255, 0.08);
-            border-left: 4px solid #4299e1;
-            padding: 12px 18px;
-            margin-top: 12px;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95em;
-        }
-        .nested-note::before {
-            content: "↓ ";
-            font-weight: bold;
-            color: #4299e1;
-        }
-        @media print {
-            body {
-                background: white;
-                padding: 20px;
-            }
-            .container {
-                box-shadow: none;
-                padding: 0;
-            }
-            .slide-card {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
-        }
-        .section-divider {
-            text-align: center;
-            margin: 40px 0;
-            color: #cbd5e0;
-            font-weight: 600;
-            font-size: 0.9em;
-        }
-        .total-time {
-            text-align: center;
-            background: rgba(255, 105, 180, 0.1);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 30px;
-            font-weight: 600;
-            color: #ff69b4;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/design-system.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>💡 O Novo Código</h1>
-            <p class="subtitle">Roteiro da Apresentação • Slide por Slide</p>
+    <main class="ds-app-shell">
+        <header class="ds-header">
+            <div class="ds-header__eyebrow">Roteiro</div>
+            <h1 class="ds-header__title">O Novo Código</h1>
+            <p class="ds-header__subtitle">Resumo slide a slide da apresentação</p>
         </header>
 
-        <!-- Slide 1 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">1</div>
-                <div class="slide-time">0:00 - 0:13</div>
-            </div>
-            <div class="slide-title">💡 O Novo Código</div>
-            <div class="slide-content">
-                Olá. No mundo do desenvolvimento de software, a gente está vivendo uma mudança. E que mudança! Uma nova era que vai muito, mas muito além de só sentar e escrever código. Vamos mergulhar juntos e entender o que isso realmente significa.
-            </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">2</div>
-                <div class="slide-time">0:13 - 0:29</div>
-            </div>
-            <div class="slide-title">🤔 O Problema</div>
-            <div class="slide-content">
-                Para começar, vamos com uma pergunta que, olha, é bem familiar. <strong>Quanto tempo sua equipe gasta reconstruindo contexto?</strong> Sabe aquela situação: "Por que decidimos fazer assim mesmo?" E aí começa a caçada: Slack, Jira, PRs antigos, documentos desatualizados, código, pessoas que já saíram da empresa...
-                <div class="key-points">
-                    <strong>Pontos-chave:</strong> É uma verdadeira <strong>arqueologia de decisões</strong>. É a energia criativa da nossa equipe sendo gasta para juntar peças de um quebra-cabeça em vez de criar o futuro.
+        <section class="ds-print-block">
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 1</span>
+                    <span class="ds-timing">0:00 &ndash; 0:13</span>
                 </div>
-            </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">3</div>
-                <div class="slide-time">0:29 - 0:46</div>
-            </div>
-            <div class="slide-title">🧠 Amnésia Organizacional</div>
-            <div class="slide-content">
-                Pois é. Esse fenômeno tem nome, viu? É a tal da <strong>Amnésia Organizacional</strong>. É basicamente isso: a gente tem equipes brilhantes, gente super criativa, mas de alguma forma, o conhecimento coletivo simplesmente some, se perde no meio do caminho.
-            </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">4</div>
-                <div class="slide-time">0:46 - 1:01</div>
-            </div>
-            <div class="slide-title">💬 Citação Gojko Adzic</div>
-            <div class="slide-content">
-                E essa frase aqui, nossa, ela resume o desafio perfeitamente. Pensa bem, <strong>de que adianta ter tanto talento, tanta gente boa, se a gente não consegue construir em cima do que já foi aprendido?</strong> É exatamente essa questão que a gente vai explorar agora.
-            </div>
-        </div>
-
-        <div class="section-divider">• • • SEÇÃO 1: O PROBLEMA • • •</div>
-
-        <!-- Slide 5 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">5</div>
-                <div class="slide-time">1:01 - 1:17</div>
-            </div>
-            <div class="slide-title">📚 Dívida de Conhecimento</div>
-            <div class="slide-content">
-                E a primeira parte da nossa análise vai direto na raiz do problema. Do mesmo jeito que existe a dívida técnica, a gente acaba acumulando uma <strong>Dívida de Conhecimento</strong>. Informações que são super importantes acabam se perdendo ou ficando velhas com o tempo.
-            </div>
-        </div>
-
-        <!-- Slide 6 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">6</div>
-                <div class="slide-time">1:17 - 1:37</div>
-            </div>
-            <div class="slide-title">⚠️ Impactos da Dívida</div>
-            <div class="slide-content">
-                E o resultado dessa dívida? É o tempo desperdiçado. Horas e horas montando o quebra-cabeça do <strong>"Por quê?"</strong>. A gente precisa juntar várias camadas - Slack, Jira, PRs, documentos - pra entender a intenção original. E esse esforço se repete. Cada pessoa nova que chega, cada funcionalidade que precisa ser alterada.
-                <div class="key-points">
-                    <strong>Resultado:</strong> Retrabalho, bugs e desperdício de tempo que poderia estar sendo usado pra inovar.
+                <h3>Introdução &mdash; O Novo Código</h3>
+                <p>Nova era no desenvolvimento de software: muito além de escrever código.</p>
+                <div class="ds-badge-group">
+                    <span class="ds-chip ds-chip--accent">Brain → Especificação → IA → Resultado</span>
                 </div>
-                <div class="nested-note">
-                    Se necessário: Exemplo concreto da validação de CPF - a caça ao contexto através de múltiplas fontes
+            </article>
+
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 2</span>
+                    <span class="ds-timing">0:13 &ndash; 0:29</span>
                 </div>
-            </div>
-        </div>
+                <h3>O Problema &mdash; Perguntas de desalinhamento</h3>
+                <p>Sua equipe já resolveu o mesmo problema mais de uma vez?</p>
+                <ul>
+                    <li>Questão central: grande interrogação rosa.</li>
+                    <li>Doodles de contexto: especificação, arquitetura, intenção, IA, comunicação, infraestrutura.</li>
+                </ul>
+            </article>
 
-        <!-- Slide 7 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">7</div>
-                <div class="slide-time">1:37 - 1:58</div>
-            </div>
-            <div class="slide-title">💬 Citação Dan North</div>
-            <div class="slide-content">
-                Agora, olha que interessante essa ideia. A gente valoriza tanto o código, né? Mas a verdade é que ele é uma representação incompleta. <strong>"O código em si é uma projeção com perdas da especificação."</strong>
-                <div class="key-points">
-                    Essa dívida de conhecimento acontece porque a ideia original se perde na tradução. A conversa brilhante na lousa vira um documento, que vira uma tarefa, que vira código. A cada passo, perdemos um pouco da <strong>intenção</strong>. No final, o código funciona, mas ele não 'lembra' mais de todas as decisões que o criaram. Falta uma <strong>memória viva</strong>.
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 3</span>
+                    <span class="ds-timing">0:29 &ndash; 0:46</span>
                 </div>
-            </div>
-        </div>
+                <h3>Conceito &mdash; Amnésia organizacional</h3>
+                <p>Falha da memória coletiva que leva a retrabalho e documentação desatualizada.</p>
+                <ul>
+                    <li>Quadro rosa com título destacado.</li>
+                    <li>Doodles: engrenagens, lupa, mão escrevendo, cérebro.</li>
+                </ul>
+            </article>
 
-        <div class="section-divider">• • • SEÇÃO 2: A NOVA PERSPECTIVA • • •</div>
-
-        <!-- Slide 8 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">8</div>
-                <div class="slide-time">1:58 - 2:13</div>
-            </div>
-            <div class="slide-title">📊 20% vs 80%</div>
-            <div class="slide-content">
-                Na verdade, tem estudos que sugerem que o código, o artefato final, representa só uns <strong>20%</strong> do valor total que uma pessoa programadora entrega. Só 20%. Então, a pergunta é: <strong>onde é que estão os outros 80%?</strong>
-            </div>
-        </div>
-
-        <!-- Slide 9 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">9</div>
-                <div class="slide-time">2:13 - 2:27</div>
-            </div>
-            <div class="slide-title">🗣️ Comunicação Estruturada</div>
-            <div class="slide-content">
-                Eles estão bem aqui, na <strong>comunicação estruturada</strong>. Coisas como entender de verdade os desafios, planejar as soluções, alinhar com os colegas, verificar se os objetivos foram mesmo alcançados. Tudo isso, no fundo, é comunicação.
-            </div>
-        </div>
-
-        <!-- Slide 10 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">10</div>
-                <div class="slide-time">2:27 - 2:46</div>
-            </div>
-            <div class="slide-title">❌ O Erro com IA</div>
-            <div class="slide-content">
-                E essa tabela ilustra de um jeito genial o nosso erro, principalmente agora com Inteligência Artificial. <strong>A gente gera um código a partir de um prompt e joga o prompt fora.</strong>
-                <div class="key-points">
-                    É o mesmo que jogar o código-fonte no lixo e guardar com todo o cuidado o arquivo compilado. Simplesmente não faz sentido, né?
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 4</span>
+                    <span class="ds-timing">0:46 &ndash; 1:01</span>
                 </div>
-                <div class="nested-note">
-                    Se necessário: Exemplo prático do sistema de login
+                <h3>Citação &mdash; Inteligência sem memória</h3>
+                <p>"Inteligência sem memória é apenas aleatoriedade sofisticada."</p>
+                <p>Desafio: construir sobre o conhecimento aprendido.</p>
+            </article>
+
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 5</span>
+                    <span class="ds-timing">1:01 &ndash; 1:17</span>
                 </div>
-            </div>
-        </div>
+                <h3>Seção 1 &mdash; Dívida de conhecimento</h3>
+                <p>Informações cruciais se perdem ou ficam obsoletas, tal qual a dívida técnica.</p>
+                <p><strong>Pergunta central:</strong> por que esquecemos?</p>
+            </article>
 
-        <!-- Slide 11 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">11</div>
-                <div class="slide-time">2:46 - 2:57</div>
-            </div>
-            <div class="slide-title">📖 Além do Código: A Especificação</div>
-            <div class="slide-content">
-                Certo. Então o ponto central é que a gente precisa de uma <strong>nova fonte da verdade</strong>. E essa fonte não é mais o código. Ela é a <strong>Especificação</strong>.
-            </div>
-        </div>
-
-        <!-- Slide 12 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">12</div>
-                <div class="slide-time">2:57 - 3:13</div>
-            </div>
-            <div class="slide-title">🌐 Artefato Universal</div>
-            <div class="slide-content">
-                Uma especificação bem escrita se torna o nosso <strong>artefato universal</strong>. É o documento que coloca todo mundo na mesma página, e não só a engenharia. Pessoal de produto, jurídico, segurança, todo mundo pode ler, discutir e ajudar a construir essa única fonte, garantindo que os objetivos são os mesmos para todo mundo.
-            </div>
-        </div>
-
-        <div class="section-divider">• • • SEÇÃO 3: A SOLUÇÃO • • •</div>
-
-        <!-- Slide 13 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">13</div>
-                <div class="slide-time">3:13 - 3:25</div>
-            </div>
-            <div class="slide-title">🤖 Memória Aumentada</div>
-            <div class="slide-content">
-                Ok. Legal na teoria, mas e na prática? Como a gente torna isso real? A solução para isso é o que a gente pode chamar de <strong>Memória Aumentada</strong>. É a junção de duas coisas: Inteligência Artificial (IA) e nossa <strong>"Receita de Bolo"</strong>.
-                <div class="key-points">
-                    A IA funciona como o grande <strong>bibliotecário</strong> da nossa empresa, lendo e conectando tudo, e nunca esquecendo nada. E o BDD é nossa <strong>Linguagem Universal</strong> - pensem nisso como uma receita: antes de construir qualquer coisa, escrevemos juntos uma receita super clara.
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 6</span>
+                    <span class="ds-timing">1:17 &ndash; 1:37</span>
                 </div>
-                <div class="nested-note">
-                    Se necessário: Contexto histórico do BDD e décadas de problemas de comunicação
-                </div>
-            </div>
-        </div>
+                <h3>Impactos da dívida</h3>
+                <ul>
+                    <li>Gráfico de pizza com retrabalho (34%), bugs (33%) e desalinhamento (33%).</li>
+                    <li>Texto lateral: telefone sem fio entre Produto, Dev e QA.</li>
+                </ul>
+            </article>
 
-        <!-- Slide 14 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">14</div>
-                <div class="slide-time">3:25 - 4:14</div>
-            </div>
-            <div class="slide-title">🔄 Como Funciona na Prática</div>
-            <div class="slide-content">
-                E o fluxo de trabalho é bem simples, mas muito poderoso:
-                <div class="key-points">
-                    <strong>1.</strong> Juntamos todo o <strong>Contexto</strong>: requisitos, regras, conversas. Tudo.<br>
-                    <strong>2.</strong> <strong>Alimentamos uma IA</strong> com essa informação toda.<br>
-                    <strong>3.</strong> A IA <strong>Sugere nossa "Receita"</strong> numa linguagem super clara.<br>
-                    <strong>4.</strong> Aqui está a mágica: a equipe toda - Negócios, Dev e QA - <strong>Refina</strong> esse cenário juntos. A IA nos entrega o rascunho, o ponto de partida. Ela faz o trabalho pesado de lembrar de todas as regras. Nosso papel como especialistas é refinar, discutir e validar.<br>
-                    <strong>5.</strong> Por fim, esse cenário vira um <strong>Teste Automatizado</strong> - nossa documentação viva, sempre atualizada.
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 7</span>
+                    <span class="ds-timing">1:37 &ndash; 1:58</span>
                 </div>
-                <div class="nested-note">
-                    Se necessário: Exemplo concreto de receita BDD (DADO-QUANDO-ENTÃO)
+                <h3>Citação &mdash; Código como projeção com perdas</h3>
+                <p>"O código em si é uma projeção com perdas da especificação."</p>
+                <p>Sem intenção registrada, perdemos nuances importantes.</p>
+            </article>
+
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 8</span>
+                    <span class="ds-timing">1:58 &ndash; 2:27</span>
                 </div>
-            </div>
-        </div>
+                <h3>Métricas &mdash; 20% código vs. 80% comunicação</h3>
+                <ul>
+                    <li>Visual 20%: palavra "Code" fragmentada + livro de especificações.</li>
+                    <li>Visual 80%: comunicação estruturada como ativo principal.</li>
+                </ul>
+            </article>
 
-        <div class="section-divider">• • • ENCERRAMENTO • • •</div>
-
-        <!-- Slide 15 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">15</div>
-                <div class="slide-time">4:14 - 4:32</div>
-            </div>
-            <div class="slide-title">💭 Uma Provocação</div>
-            <div class="slide-content">
-                Agora, antes de avançarmos, é importante deixar claro: isso é uma <strong>provocação</strong>. E se pudéssemos resolver o problema da arqueologia de decisões? Ter uma especificação viva que todos entendem, mantida com ajuda da IA.
-                <div class="key-points">
-                    Mas essa é uma <strong>proposta</strong>, não uma decisão já tomada.
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 9</span>
+                    <span class="ds-timing">2:27 &ndash; 2:46</span>
                 </div>
-            </div>
-        </div>
+                <h3>Paradigma &mdash; O erro com IA</h3>
+                <p>Cenário errado: gerar código e descartar o prompt.</p>
+                <p>Cenário certo: ciclo de feedback que preserva documentação e especificação.</p>
+            </article>
 
-        <!-- Slide 16 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">16</div>
-                <div class="slide-time">4:32 - 4:50</div>
-            </div>
-            <div class="slide-title">🎯 Próximos Passos</div>
-            <div class="slide-content">
-                Para avaliar essa abordagem, temos alguns <strong>próximos passos</strong> importantes:
-                <div class="key-points">
-                    • Definir <strong>guidelines</strong> de quando e como usar<br>
-                    • Fazer <strong>experimentos</strong> em cenários controlados<br>
-                    • <strong>Medir o impacto</strong> real - tempo recuperado, qualidade<br>
-                    • <strong>Ouvir a equipe</strong> e adaptar o processo
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 10</span>
+                    <span class="ds-timing">2:46 &ndash; 3:13</span>
                 </div>
-            </div>
-        </div>
+                <h3>Seção 2 &mdash; Além do código: a especificação</h3>
+                <p>Especificação como nova fonte da verdade e elo entre áreas.</p>
+                <p>Diagrama: livro conectado a ícones de equipes, regras e segurança.</p>
+            </article>
 
-        <!-- Slide 17 -->
-        <div class="slide-card">
-            <div class="slide-header">
-                <div class="slide-number">17</div>
-                <div class="slide-time">4:50 - 5:30</div>
-            </div>
-            <div class="slide-title">💬 Vamos Conversar?</div>
-            <div class="slide-content">
-                Então, pra encerrar: esta é uma <strong>provocação</strong> para iniciarmos uma discussão. O problema da arqueologia de decisões é real. A gente passa horas juntando peças de informação fragmentada. A solução pode ter muitas formas. Mas precisamos começar a conversa.
-                <div class="key-points">
-                    <strong>O que vocês acham?</strong> É uma ideia que faz sentido explorar? Vamos construir isso juntos?
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 11</span>
+                    <span class="ds-timing">3:13 &ndash; 3:44</span>
                 </div>
-            </div>
-        </div>
+                <h3>Seção 3 &mdash; Memória aumentada</h3>
+                <p>IA + BDD criam documentação viva, precisa e evolutiva.</p>
+                <p>Conceito: assistente que não esquece trabalhando com linguagem comum.</p>
+            </article>
 
-        <div class="total-time">
-            ⏱️ Tempo Total Estimado: ~5-8 minutos
-        </div>
-    </div>
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 12</span>
+                    <span class="ds-timing">3:44 &ndash; 4:32</span>
+                </div>
+                <h3>Fluxo de trabalho &mdash; BDD aumentado por IA</h3>
+                <ol>
+                    <li>Coletar contexto.</li>
+                    <li>Alimentar IA.</li>
+                    <li>IA sugere BDD.</li>
+                    <li>Equipe refina.</li>
+                    <li>Teste automatizado como documentação viva.</li>
+                </ol>
+                <div class="ds-callout ds-callout--success">
+                    <strong>Exemplo:</strong> DADO item e cupom &rarr; QUANDO finaliza compra &rarr; ENTÃO desconto é aplicado.
+                </div>
+            </article>
+
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 13</span>
+                    <span class="ds-timing">4:32 &ndash; 4:50</span>
+                </div>
+                <h3>Benefícios claros</h3>
+                <ul>
+                    <li>Aumento de alinhamento.</li>
+                    <li>Redução de retrabalho.</li>
+                    <li>Mais tempo para inovar.</li>
+                </ul>
+            </article>
+
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 14</span>
+                    <span class="ds-timing">4:50 &ndash; 5:39</span>
+                </div>
+                <h3>Seção 4 &mdash; A nova era: quem é o programador?</h3>
+                <p>Analogia da Constituição como especificação universal.</p>
+                <p>Tabela de alinhamento: Programador, Gerente de Produto, Legislador e "Todos nós".</p>
+            </article>
+
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 15</span>
+                    <span class="ds-timing">5:39 &ndash; 5:55</span>
+                </div>
+                <h3>Conclusão &mdash; A habilidade mais valiosa</h3>
+                <p>"A pessoa que se comunica de forma mais eficaz é a programadora mais valiosa."</p>
+                <p>Ênfase na clareza de intenção.</p>
+            </article>
+
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 16</span>
+                    <span class="ds-timing">5:55 &ndash; 6:12</span>
+                </div>
+                <h3>Síntese &mdash; Engenharia como clarificação</h3>
+                <p>Trabalho é resolver problemas humanos: transição da confusão para a estrutura.</p>
+                <p>Fluxo conceitual: Confusão → Clarificação → Estrutura.</p>
+            </article>
+
+            <article class="ds-card">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip">Slide 17</span>
+                    <span class="ds-timing">6:12 &ndash; 6:42</span>
+                </div>
+                <h3>Provocação final &mdash; A ferramenta da nova era</h3>
+                <p>Se a IDE foi a ferramenta da era do código, qual será a da era da especificação?</p>
+                <p>Sugestão: um "clarificador de pensamento integrado".</p>
+            </article>
+
+            <div class="ds-card ds-card--muted">
+                <div class="ds-slide__meta">
+                    <span class="ds-chip ds-chip--accent">Duração total</span>
+                    <span class="ds-timing">~ 7 minutos</span>
+                </div>
+                <p>Espaço para adaptações conforme público e tempo disponível.</p>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
-
