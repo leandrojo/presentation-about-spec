@@ -76,6 +76,15 @@
         .reveal li {
             margin: 10px 0;
         }
+        .reveal .nested-detail {
+            background-color: rgba(255, 105, 180, 0.03);
+            padding: 40px;
+            border-radius: 15px;
+        }
+        .reveal .nested-detail h3 {
+            color: #ff69b4;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -91,8 +100,10 @@
             <!-- Slide 2: O Problema -->
             <section>
                 <h2>O Problema</h2>
-                <h3>Sua equipe já resolveu o <strong>mesmo problema mais de uma vez?</strong></h3>
-                <p>Retrabalho e documentação desatualizada</p>
+                <h3>Quanto tempo sua equipe gasta <strong>reconstruindo contexto?</strong></h3>
+                <p>"Por que decidimos fazer assim mesmo?"</p>
+                <p style="margin-top: 20px;">Slack, Jira, PRs, docs desatualizados, código, pessoas que já saíram...</p>
+                <p style="margin-top: 20px; color: #ff69b4;"><strong>Arqueologia de decisões</strong> em vez de criar o futuro.</p>
             </section>
 
             <!-- Slide 3: Conceito -->
@@ -119,14 +130,33 @@
 
             <!-- Slide 6: Impactos -->
             <section>
-                <h2>Impactos da Dívida</h2>
-                <p>A dívida de conhecimento gera <strong>retrabalho</strong>, <strong>bugs</strong> e <strong>desalinhamento</strong> entre as equipes.</p>
-                <p>O "telefone sem fio" entre Produto, Dev e QA</p>
-                <ul>
-                    <li>Retrabalho: 34%</li>
-                    <li>Bugs: 33%</li>
-                    <li>Desalinhamento: 33%</li>
-                </ul>
+                <section>
+                    <h2>Impactos da Dívida</h2>
+                    <p>A dívida de conhecimento gera <strong>retrabalho</strong>, <strong>bugs</strong> e desperdício de <strong>tempo</strong>.</p>
+                    <p style="margin-top: 20px;">O esforço de <strong>juntar as camadas</strong> que descrevem a intenção</p>
+                    <ul>
+                        <li>Retrabalho: 34%</li>
+                        <li>Bugs: 33%</li>
+                        <li>Arqueologia: 33%</li>
+                    </ul>
+                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ Exemplo prático</p>
+                </section>
+                <section class="nested-detail">
+                    <h3>A Caça ao Contexto</h3>
+                    <div style="text-align: left; max-width: 850px; margin: 0 auto;">
+                        <p style="font-size: 1.1em; margin-bottom: 20px;">"Por que o sistema valida CPF só no checkout?"</p>
+                        <div style="margin-left: 20px;">
+                            <p style="margin-top: 15px;">📱 <strong>Slack:</strong> "Alguém lembra por que validamos CPF só no final?"</p>
+                            <p style="margin-top: 10px;">🎫 <strong>Jira:</strong> Ticket de 2 anos atrás, descrição vaga</p>
+                            <p style="margin-top: 10px;">💬 <strong>PR #342:</strong> "Revert: validação antecipada causava lentidão"</p>
+                            <p style="margin-top: 10px;">📄 <strong>Doc:</strong> Desatualizado, fala de API antiga</p>
+                            <p style="margin-top: 10px;">👤 <strong>Autor original:</strong> Saiu da empresa</p>
+                        </div>
+                        <p style="margin-top: 25px; color: #ff69b4; font-size: 1.1em;">
+                            <strong>Resultado:</strong> 3 horas montando o quebra-cabeça. Cada vez que alguém novo precisa entender.
+                        </p>
+                    </div>
+                </section>
             </section>
 
             <!-- Slide 7: Citação -->
@@ -134,7 +164,9 @@
                 <div class="quote">
                     "O código em si é uma <strong>projeção com perdas</strong> da especificação."
                 </div>
-                <p>O código é uma representação incompleta, perdendo intenções e comentários</p>
+                <p>Essa dívida de conhecimento acontece porque a ideia original se perde na tradução.</p>
+                <p style="margin-top: 20px;">Conversa brilhante → Documento → Tarefa → Código</p>
+                <p style="font-size: 0.9em; margin-top: 20px;">A cada passo, perdemos um pouco da <strong>intenção</strong>. Falta uma <strong>memória viva</strong>.</p>
             </section>
 
             <!-- Slide 8: Métricas -->
@@ -156,18 +188,41 @@
 
             <!-- Slide 9: Paradigma -->
             <section>
-                <h2>O Erro com IA</h2>
-                <div class="comparison">
-                    <div class="wrong">
-                        <h3>❌ Cenário Errado</h3>
-                        <p>Gerar código a partir de um prompt e <strong>jogar o prompt fora</strong></p>
-                        <p>(perdendo o código-fonte)</p>
+                <section>
+                    <h2>O Erro com IA</h2>
+                    <div class="comparison">
+                        <div class="wrong">
+                            <h3>❌ Cenário Errado</h3>
+                            <p>Gerar código a partir de um prompt e <strong>jogar o prompt fora</strong></p>
+                            <p>(perdendo o código-fonte)</p>
+                        </div>
+                        <div class="right">
+                            <h3>✅ Cenário Certo</h3>
+                            <p>Ciclo de feedback que <strong>preserva</strong> a documentação/especificação</p>
+                        </div>
                     </div>
-                    <div class="right">
-                        <h3>✅ Cenário Certo</h3>
-                        <p>Ciclo de feedback que <strong>preserva</strong> a documentação/especificação</p>
+                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ Exemplo prático</p>
+                </section>
+                <section class="nested-detail">
+                    <h3>Na Prática</h3>
+                    <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                        <p><strong>❌ Abordagem Errada:</strong></p>
+                        <p style="margin-left: 20px; margin-top: 10px;">
+                            "IA, crie um sistema de login" → Código gerado → Prompt deletado
+                        </p>
+                        <p style="margin-top: 10px; margin-left: 20px; color: #ff0000;">
+                            6 meses depois: "Como funciona mesmo o sistema de login?"
+                        </p>
+                        <hr style="margin: 30px 0; border-color: rgba(255,105,180,0.3);">
+                        <p><strong>✅ Abordagem Certa:</strong></p>
+                        <p style="margin-left: 20px; margin-top: 10px;">
+                            Especificação viva → IA gera código → Código mantém link com especificação
+                        </p>
+                        <p style="margin-top: 10px; margin-left: 20px; color: #00aa00;">
+                            6 meses depois: Especificação sempre atualizada e testada.
+                        </p>
                     </div>
-                </div>
+                </section>
             </section>
 
             <!-- Slide 10: Seção 2 -->
@@ -180,41 +235,92 @@
 
             <!-- Slide 11: Seção 3 -->
             <section>
-                <div class="section-number">3.</div>
-                <h2>Memória Aumentada</h2>
-                <p><strong>Memória Aumentada:</strong> A união de <strong>IA</strong> e <strong>BDD</strong> (Behavior-Driven Development)</p>
-                <p>Para criar <strong>documentação viva</strong>, precisa e que evolui com o produto</p>
+                <section>
+                    <div class="section-number">3.</div>
+                    <h2>Memória Aumentada</h2>
+                    <p><strong>Memória Aumentada:</strong> A união de <strong>IA</strong> e nossa <strong>"Receita de Bolo"</strong></p>
+                    <p style="margin-top: 20px;">A IA funciona como o grande bibliotecário que nunca esquece nada.</p>
+                    <p style="margin-top: 20px;">E o BDD é nossa <strong>Linguagem Universal</strong> que todos entendem.</p>
+                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ O que é BDD?</p>
+                </section>
+                <section class="nested-detail">
+                    <h3>O que é BDD?</h3>
+                    <p style="text-align: left; max-width: 800px; margin: 0 auto;">
+                        Por <strong>décadas</strong>, o desenvolvimento de software sofreu com um problema: 
+                        a comunicação entre negócio e técnico.
+                    </p>
+                    <p style="text-align: left; max-width: 800px; margin: 20px auto 0;">
+                        <strong>BDD (Behavior-Driven Development)</strong> surgiu como solução:
+                        uma forma de escrever especificações que <strong>todos</strong> podem ler e validar.
+                    </p>
+                    <p style="text-align: left; max-width: 800px; margin: 20px auto 0;">
+                        É como uma receita: clara, passo a passo, sem ambiguidades.
+                    </p>
+                </section>
             </section>
 
             <!-- Slide 12: Fluxo de Trabalho -->
             <section>
-                <h2>BDD Aumentado por IA</h2>
-                <h3>Fluxo:</h3>
-                <ol>
-                    <li>Coletar Contexto</li>
-                    <li>Alimentar IA</li>
-                    <li>IA Sugere BDD</li>
-                    <li>Equipe Refina</li>
-                    <li>Teste Automatizado (Documentação Viva)</li>
-                </ol>
-                <div class="bdd-example">
-                    <p><strong>DADO</strong> um item e um cupom</p>
-                    <p><strong>QUANDO</strong> finaliza a compra</p>
-                    <p><strong>ENTÃO</strong> o total exibe o <strong>desconto</strong></p>
-                    <p style="font-size: 0.8em; margin-top: 10px;">(Legível por todos)</p>
-                </div>
+                <section>
+                    <h2>Nossa "Receita de Bolo" em Ação</h2>
+                    <h3>Fluxo:</h3>
+                    <ol>
+                        <li>Coletar Contexto</li>
+                        <li>Alimentar IA</li>
+                        <li>IA Sugere a "Receita"</li>
+                        <li><strong>Equipe Refina</strong> (o papel humano!)</li>
+                        <li>Teste Automatizado (Documentação Viva)</li>
+                    </ol>
+                    <div class="bdd-example" style="background-color: rgba(255, 200, 100, 0.1); border-color: rgba(255, 150, 0, 0.3);">
+                        <p style="font-size: 1.1em; margin-bottom: 15px;">📝 <strong>Exemplo de Receita:</strong></p>
+                        <p><strong>DADO</strong> que tenho ingredientes (item + cupom)</p>
+                        <p><strong>QUANDO</strong> sigo o processo (finalizar compra)</p>
+                        <p><strong>ENTÃO</strong> obtenho o resultado (desconto aplicado)</p>
+                        <p style="font-size: 0.8em; margin-top: 10px; color: #666;">(Legível por Negócios, Dev, QA, Marketing...)</p>
+                    </div>
+                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ O papel da IA</p>
+                </section>
+                <section class="nested-detail">
+                    <h3>A IA como Facilitador</h3>
+                    <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                        <p><strong>A IA entrega o rascunho</strong>, o ponto de partida. Ela faz o <strong>trabalho pesado</strong> de lembrar todas as regras existentes.</p>
+                        <p style="margin-top: 20px;"><strong>Nosso papel como especialistas</strong> é usar nossa inteligência para refinar, discutir e validar.</p>
+                        <p style="margin-top: 20px; color: #ff69b4; font-size: 1.1em;">
+                            A tecnologia nos libera da tarefa de <strong>'lembrar'</strong> para focarmos em <strong>'pensar'</strong> e <strong>'criar juntos'</strong>.
+                        </p>
+                    </div>
+                </section>
             </section>
 
             <!-- Slide 13: Benefícios -->
             <section>
-                <h2>Benefícios Claros</h2>
-                <p>Benefícios claros: <strong>Alinhamento</strong>, menos <strong>retrabalho</strong> e mais tempo para <strong>inovar</strong></p>
-                <p>Equipes liberadas para focar no valor</p>
-                <ul>
-                    <li>↑ Alinhamento</li>
-                    <li>↓ Retrabalho</li>
-                    <li>↑ Inovação</li>
-                </ul>
+                <section>
+                    <h2>Benefícios Claros</h2>
+                    <p>Benefícios claros: <strong>Alinhamento</strong>, menos <strong>retrabalho</strong> e mais tempo para <strong>inovar</strong></p>
+                    <p>Equipes liberadas para focar no valor</p>
+                    <ul>
+                        <li>↑ Alinhamento</li>
+                        <li>↓ Retrabalho</li>
+                        <li>↑ Inovação</li>
+                    </ul>
+                    <p style="font-size: 0.8em; margin-top: 30px; opacity: 0.7;">↓ Times pequenos, grande impacto</p>
+                </section>
+                <section class="nested-detail">
+                    <h3>Times Pequenos com Superpoderes</h3>
+                    <div style="text-align: left; max-width: 800px; margin: 0 auto;">
+                        <p>Com a IA fazendo o <strong>trabalho pesado</strong>, conseguimos manter times <strong>enxutos</strong> e <strong>ágeis</strong>.</p>
+                        <p style="margin-top: 20px;">
+                            A IA lê documentações antigas, lembra de todas as regras de negócio, 
+                            detecta inconsistências e sugere especificações completas.
+                        </p>
+                        <p style="margin-top: 20px; color: #ff69b4; font-size: 1.1em;">
+                            <strong>Resultado:</strong> Pequenos times com grande potencial de entrega e qualidade.
+                        </p>
+                        <p style="margin-top: 20px; font-size: 0.9em;">
+                            Sem precisar escalar linearmente a equipe para escalar o produto.
+                        </p>
+                    </div>
+                </section>
             </section>
 
             <!-- Slide 14: Seção 4 -->
@@ -251,7 +357,13 @@
             <section>
                 <h2>Vamos Construir Juntos?</h2>
                 <p style="margin-top: 50px;">Se a IDE foi a ferramenta da era do Código, qual será a da era da Especificação?</p>
-                <p style="font-size: 1.3em; margin-top: 40px;">Precisamos de ferramentas que nos ajudem a <strong>clarificar</strong> e <strong>preservar</strong> o pensamento</p>
+                <p style="font-size: 1.2em; margin-top: 30px;">Um <strong>"Clarificador de Pensamento"</strong> que nos ajude a:</p>
+                <ul style="text-align: left; max-width: 600px; margin: 30px auto;">
+                    <li>Expressar intenções com clareza total</li>
+                    <li>Preservar a memória coletiva</li>
+                    <li>Potencializar times pequenos</li>
+                    <li>Focar no que realmente importa: criar o futuro</li>
+                </ul>
                 <p style="font-size: 1.5em; margin-top: 40px; color: #ff69b4;">E queremos construir isso <strong>com você</strong>.</p>
             </section>
 
